@@ -1,6 +1,7 @@
 [build]
-  Command = "npm run build && npm run build:lambda"
+  command = "npm run build && npm run build:lambda"
   Functions = "lambda"
+  publish = "public/"
 
 [[headers]]
   for = "/*" # This defines which paths this specific [[headers]] block will cover.
