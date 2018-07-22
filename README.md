@@ -31,7 +31,7 @@ Clone the repositor and cd into it, then:
 
 ```
 $ yarn install
-$ npm start
+$ yarn start
 ```
 
 The start command will start the lambda server as well as gatsby development server. Both servers will
@@ -56,8 +56,8 @@ When you push and deploy to Netlify, it will automatically build your project fo
 You can test out the production build by running:
 
 ```
-$ npm run build
-$ npm run serve
+$ gatsby build
+$ gatsby serve
 ```
 
 ## References
