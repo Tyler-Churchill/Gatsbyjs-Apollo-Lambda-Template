@@ -1,0 +1,55 @@
+{
+  "name": "gatsby-apollo-lambda-template",
+  "private": false,
+  "description": "",
+  "version": "0.0.1",
+  "author": "Tyler Churchill",
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
+    "apollo-datasource-rest": "rc",
+    "apollo-link-batch-http": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
+    "apollo-link-persisted-queries": "^0.2.1",
+    "apollo-server-lambda": "^2.0.0",
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "next",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-netlify": "^1.0.21",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-styled-components": "next",
+    "gatsby-plugin-typography": "next",
+    "graphql-tag": "^2.9.2",
+    "grid-styled": "^5.0.2",
+    "http-proxy-middleware": "^0.18.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.16.4",
+    "node-fetch": "^2.1.2",
+    "react": "^16.4.0",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.4.0",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "slash": "^1.0.0",
+    "styled-components": "^3.3.2",
+    "typography": "^0.16.17",
+    "typography-breakpoint-constants": "^0.15.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "build:lambda": "netlify-lambda build api",
+    "start:lambda": "netlify-lambda serve api",
+    "start": "npm-run-all --parallel start:lambda develop"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.4.0",
+    "npm-run-all": "^4.1.3"
+  }
+}
