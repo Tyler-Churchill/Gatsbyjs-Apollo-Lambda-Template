@@ -1,5 +1,13 @@
 # Apollo Server/Client, Gatsbyjs, Netlify Template
 
+Barebones project to get you started on a highly scaleable, free\*, and easy to use stack for web development.
+
+\*free meaning using less than 125k requests/month 100 hours run time per month with Netlify functions
+
+[DEMO](https://goofy-albattani-deb43e.netlify.com/)
+Shows a barebones gatsby, apollo client/lambda server website deployed on netlify.
+Displays two GraphQL query responses. One internal request, and one external data request.
+
 ## The JAM stack https://jamstack.org/
 
 A project template using GatsbyJs, Apollo client, Apollo lambda, and Netlify
@@ -54,9 +62,7 @@ $ npm run serve
 
 ## References
 
+- [Netlify](https://www.netlify.com/)
+- [Apollo](https://www.apollographql.com/)
 - [Official styled-components site](https://www.styled-components.com/)
 - [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
-
-```
-
-```
