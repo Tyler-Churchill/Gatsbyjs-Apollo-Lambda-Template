@@ -34,6 +34,7 @@ const options = {
   resolvers,
   tracing: true,
   cacheControl: true,
+  engine: false,
 }
 
 if (process.env.ENGINE_API_KEY) {
