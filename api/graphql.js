@@ -3,7 +3,7 @@ const { RESTDataSource } = require('apollo-datasource-rest')
 const fetch = require('isomorphic-fetch')
 
 const typeDefs = gql`
-  type Event {
+  type Event @cacheControl(maxAge: 120) {
     id: ID!
     name: String!
     city: String
@@ -12,7 +12,7 @@ const typeDefs = gql`
 
   type Query {
     serverReady: String
-    getCurrentCalgaryEvents: [Event]
+    getCurrentCalgaryEvents: [Event] @cache
   }
 `
 const resolvers = {
@@ -32,6 +32,8 @@ const resolvers = {
 const options = {
   typeDefs,
   resolvers,
+  tracing: true,
+  cacheControl: true,
 }
 
 if (process.env.ENGINE_API_KEY) {
