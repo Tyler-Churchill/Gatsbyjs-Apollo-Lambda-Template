@@ -12,7 +12,7 @@ const typeDefs = gql`
 
   type Query {
     serverReady: String
-    getCurrentCalgaryEvents: [Event] @cache
+    getCurrentCalgaryEvents: [Event] @cacheControl(maxAge: 120)
   }
 `
 const resolvers = {
