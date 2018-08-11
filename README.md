@@ -17,6 +17,8 @@ A project template using GatsbyJs, Apollo client, Apollo lambda, and Netlify
 - Node (v8.2.0+)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
+\*\* Note, this project is using Gatsby v2
+
 ## Getting Started (Recommended)
 
 Use the button below to build and deploy your own copy of this repository:
@@ -40,20 +42,20 @@ hot reload while you are developing
 To run just the GraphQL server,
 
 ```
-$ yarn start:lambda
+$ yarn start-lambda
 ```
 
 To rebuild lambda functions:
 
 ```
-$ yarn build:lambda
+$ yarn build-lambda
 ```
 
 ### Building for Production
 
 When you push and deploy to Netlify, it will automatically build your project for production.
 
-You can test out the production build by running:
+You can try out the production build locally by running:
 
 ```
 $ gatsby build

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import { ApolloProvider } from 'react-apollo'
 import { ThemeProvider } from 'styled-components'
 import Helmet from 'react-helmet'
-import { Flex, Box } from 'grid-styled'
-
+import AppClient from '../../sources/app'
 import AppContainer from './AppContainer'
 import AppNavBar from './AppNavBar'
 import AppFooter from './AppFooter'
@@ -16,7 +16,7 @@ export default class LandingLayout extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <div>
+        <ApolloProvider client={AppClient}>
           <Helmet
             defaultTitle={`EXAMPLE SITE`}
             titleTemplate={`%s | EXAMPLE SITE`}
@@ -31,7 +31,7 @@ export default class LandingLayout extends Component {
             <div>{this.props.children}</div>
             <AppFooter />
           </AppContainer>
-        </div>
+        </ApolloProvider>
       </ThemeProvider>
     )
   }

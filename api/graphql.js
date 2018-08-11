@@ -20,8 +20,9 @@ const resolvers = {
     serverReady: async () =>
       'I am response data from the GraphQL lambda server!',
     getCurrentCalgaryEvents: async (root, args, { dataSources }) => {
+      const currentTime = new Date()
       const res = await fetch(
-        'https://www.showpass.com/api/public/events/?ends_on__gte=2018-07-22T20:57:34.869Z&external_link__isnull=true&is_featured=true&location__point_location=50.847599029541016,-114.19580078125,65&ordering=starts_on&page=1&page_size=12'
+        `https://www.showpass.com/api/public/events/?ends_on__gte=${currentTime.toISOString()}&external_link__isnull=true&is_featured=true&location__point_location=50.847599029541016,-114.19580078125,65&ordering=starts_on&page=1&page_size=12`
       )
       const data = await res.json()
       return data.results

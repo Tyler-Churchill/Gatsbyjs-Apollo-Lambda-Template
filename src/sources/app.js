@@ -18,8 +18,10 @@ const link = ApolloLink.from([
 // set cache restore if running on a browser
 let cache
 try {
+  // in browser, window is defined
   cache = new InMemoryCache().restore(window.__APOLLO_STATE__ || {})
 } catch (e) {
+  // in server, window not defined
   cache = new InMemoryCache()
 }
 
