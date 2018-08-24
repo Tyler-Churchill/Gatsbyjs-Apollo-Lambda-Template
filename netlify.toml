@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && npm run build:lambda"
+  command = "npm run build-static && npm run build-lambda"
   Functions = "lambda"
   publish = "public/"
 
